@@ -138,7 +138,7 @@
             @click="openLightbox(item)"
           >
             <div class="img-wrap">
-              <img v-if="item.img" :src="item.img" :alt="item.title" />
+              <img v-if="item.img" :src="item.img" :alt="item.title" loading="lazy" />
               <span v-else>{{ item.placeholder }}</span>
             </div>
             <div class="info">
@@ -154,7 +154,7 @@
     <div class="lightbox" v-if="lightboxVisible" @click.self="closeLightbox">
       <button class="lightbox-close" @click="closeLightbox">&times;</button>
       <div class="lightbox-content">
-        <img :src="lightboxItem?.img" :alt="lightboxItem?.title" />
+        <img :src="lightboxItem?.img" :alt="lightboxItem?.title" loading="lazy" />
         <div class="lightbox-info">
           <h3>{{ lightboxItem?.title }}</h3>
           <p>{{ lightboxItem?.desc }}</p>
