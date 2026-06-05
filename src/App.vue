@@ -267,6 +267,7 @@ const categories = [
 
 const activeCategory = ref('all')
 
+const baseUrl = import.meta.env.BASE_URL || '/'
 const lightboxVisible = ref(false)
 const lightboxItem = ref(null)
 
@@ -284,28 +285,28 @@ const closeLightbox = () => {
 
 const projects = [
   // BIM
-  { cat: 'bim', title: '螺旋楼梯建模', desc: 'Revit创建的1.2米螺旋楼梯BIM模型，展示复杂建筑结构建模能力', img: '/images/bim_stair.png', placeholder: '' },
-  { cat: 'bim', title: '屋顶建模', desc: 'Revit创建的17.1米屋顶模型，体现建筑构件精细化建模水平', img: '/images/bim_roof.png', placeholder: '' },
+  { cat: 'bim', title: '螺旋楼梯建模', desc: 'Revit创建的1.2米螺旋楼梯BIM模型，展示复杂建筑结构建模能力', img: baseUrl + 'images/bim_stair.png', placeholder: '' },
+  { cat: 'bim', title: '屋顶建模', desc: 'Revit创建的17.1米屋顶模型，体现建筑构件精细化建模水平', img: baseUrl + 'images/bim_roof.png', placeholder: '' },
   // Flutter
-  { cat: 'flutter', title: '斋记 - 时令食谱与日历', desc: '时令食谱浏览、饮食日历打卡、菜品卡片展示，完整的三餐记录体系', img: '/images/flutter_app1.jpg', placeholder: '' },
-  { cat: 'flutter', title: '斋记 - 登录与个人中心', desc: '用户登录注册、个人资料管理、二十四节气邮票收集系统', img: '/images/flutter_app2.jpg', placeholder: '' },
-  { cat: 'flutter', title: '斋记 - 群聊与数据统计', desc: '群组聊天互动、点菜足迹记录、年度饮食活跃度热力图可视化', img: '/images/flutter_app3.jpg', placeholder: '' },
-  { cat: 'flutter', title: '青笺日记 - 日记应用', desc: '日记登录系统、日记列表管理、富文本编辑器（支持加粗/斜体/下划线等格式）', img: '/images/flutter_app4.jpg', placeholder: '' },
+  { cat: 'flutter', title: '斋记 - 时令食谱与日历', desc: '时令食谱浏览、饮食日历打卡、菜品卡片展示，完整的三餐记录体系', img: baseUrl + 'images/flutter_app1.jpg', placeholder: '' },
+  { cat: 'flutter', title: '斋记 - 登录与个人中心', desc: '用户登录注册、个人资料管理、二十四节气邮票收集系统', img: baseUrl + 'images/flutter_app2.jpg', placeholder: '' },
+  { cat: 'flutter', title: '斋记 - 群聊与数据统计', desc: '群组聊天互动、点菜足迹记录、年度饮食活跃度热力图可视化', img: baseUrl + 'images/flutter_app3.jpg', placeholder: '' },
+  { cat: 'flutter', title: '青笺日记 - 日记应用', desc: '日记登录系统、日记列表管理、富文本编辑器（支持加粗/斜体/下划线等格式）', img: baseUrl + 'images/flutter_app4.jpg', placeholder: '' },
   // Database
-  { cat: 'flutter', title: '数据库设计', desc: '移动应用配套数据库设计与数据管理方案', img: '/images/flutter_db.png', placeholder: '' },
+  { cat: 'flutter', title: '数据库设计', desc: '移动应用配套数据库设计与数据管理方案', img: baseUrl + 'images/flutter_db.png', placeholder: '' },
   // GIS
-  { cat: 'gis', title: 'GDP中心点迁移', desc: '展示1997-2010年GDP中心点迁移轨迹的空间分析图', img: '/images/gis_gdp_migration.jpg', placeholder: '' },
-  { cat: 'gis', title: 'GDP冷热点分析', desc: '基于空间统计的GDP冷热点分布分析与可视化呈现', img: '/images/gis_gdp_hotspot.jpg', placeholder: '' },
-  { cat: 'gis', title: 'GDP区域对比', desc: '多区域GDP数据对比可视化，直观展示经济发展差异', img: '/images/gis_gdp_compare.jpg', placeholder: '' },
-  { cat: 'gis', title: '聚类分析图', desc: '空间数据聚类分析结果的可视化展示', img: '/images/gis_cluster.jpg', placeholder: '' },
-  { cat: 'gis', title: '底图制图', desc: 'GIS底图制作与地理信息可视化呈现', img: '/images/gis_map.jpg', placeholder: '' },
+  { cat: 'gis', title: 'GDP中心点迁移', desc: '展示1997-2010年GDP中心点迁移轨迹的空间分析图', img: baseUrl + 'images/gis_gdp_migration.jpg', placeholder: '' },
+  { cat: 'gis', title: 'GDP冷热点分析', desc: '基于空间统计的GDP冷热点分布分析与可视化呈现', img: baseUrl + 'images/gis_gdp_hotspot.jpg', placeholder: '' },
+  { cat: 'gis', title: 'GDP区域对比', desc: '多区域GDP数据对比可视化，直观展示经济发展差异', img: baseUrl + 'images/gis_gdp_compare.jpg', placeholder: '' },
+  { cat: 'gis', title: '聚类分析图', desc: '空间数据聚类分析结果的可视化展示', img: baseUrl + 'images/gis_cluster.jpg', placeholder: '' },
+  { cat: 'gis', title: '底图制图', desc: 'GIS底图制作与地理信息可视化呈现', img: baseUrl + 'images/gis_map.jpg', placeholder: '' },
   // Web
-  { cat: 'web', title: '全国数据大屏', desc: '基于JavaScript的全国数据可视化全局大屏，展示数据看板能力', img: '/images/web_global.png', placeholder: '' },
-  { cat: 'web', title: '地市数据看板', desc: '地市级数据可视化看板，展示下钻分析能力', img: '/images/web_city.png', placeholder: '' },
+  { cat: 'web', title: '全国数据大屏', desc: '基于JavaScript的全国数据可视化全局大屏，展示数据看板能力', img: baseUrl + 'images/web_global.png', placeholder: '' },
+  { cat: 'web', title: '地市数据看板', desc: '地市级数据可视化看板，展示下钻分析能力', img: baseUrl + 'images/web_city.png', placeholder: '' },
   // Python
-  { cat: 'python', title: '五子棋游戏', desc: '使用Python开发的五子棋对战游戏，包含完整游戏逻辑', img: '/images/py_gobang.png', placeholder: '' },
-  { cat: 'python', title: '省会气温分布图', desc: '全国省会城市气温数据采集与热力图可视化', img: '/images/py_temp_map.png', placeholder: '' },
-  { cat: 'python', title: '气温趋势分析', desc: '省会城市气温数据趋势可视化图表', img: '/images/py_temp_trend.png', placeholder: '' }
+  { cat: 'python', title: '五子棋游戏', desc: '使用Python开发的五子棋对战游戏，包含完整游戏逻辑', img: baseUrl + 'images/py_gobang.png', placeholder: '' },
+  { cat: 'python', title: '省会气温分布图', desc: '全国省会城市气温数据采集与热力图可视化', img: baseUrl + 'images/py_temp_map.png', placeholder: '' },
+  { cat: 'python', title: '气温趋势分析', desc: '省会城市气温数据趋势可视化图表', img: baseUrl + 'images/py_temp_trend.png', placeholder: '' }
 ]
 
 const filteredProjects = computed(() => {
